@@ -55,4 +55,5 @@ gem 'omniauth-facebook'
 
 gem 'carrierwave'
 
+gem 'httparty'
 gem 'materialize-sass'

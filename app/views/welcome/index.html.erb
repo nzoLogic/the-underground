@@ -1,13 +1,17 @@
 <div class="row">
-    <div class="col s4 offset-s3">
-        <h1>hello</h1>
+  <h1 class="center">Welcome To The Underground</h1>
+      <div class="carousel carousel-slider">
+        <a href="#" class="carousel-item">
+          <%= image_tag "tribe.jpg" %>
+      </a>
+      </div>
         <% if current_user %>
         <%= link_to "Logout", logout_path %>
         <%= link_to "Profile", user_welcome_path(current_user) %>
+        <%= link_to "Events", events_path %>
         <% else %>
 
         <%= link_to "Login with facebook","/auth/facebook/" %>
         <% end %>
-        <% console %>
     </div>
 </div>
