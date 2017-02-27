@@ -9,7 +9,9 @@ class User < ApplicationRecord
     create(
     provider: auth['provider'],
     uid: auth['uid'],
-    name: auth['info']['name']
+    name: auth['info']['name'],
+    location: auth['info']['location'],
+    email: auth['info']['email']
     )
   end
 end

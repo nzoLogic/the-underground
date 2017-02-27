@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  get '/' => 'welcome#index', as: 'root'
 
-  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/user/:id' => 'user#show', as: 'user_welcome'
+  get '/auth/:provider/callback' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 end
