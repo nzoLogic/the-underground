@@ -1,5 +1,5 @@
 <% @events.each do |event| %>
   <h3>
-    <%= event.title %>
+    <%= link_to event.title, show_event_path(event) %>
   </h3>
 <% end %>

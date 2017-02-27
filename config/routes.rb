@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   get '/events' => 'event#index'
+  get '/event/:id' => 'event#show', as: 'show_event'
 end
