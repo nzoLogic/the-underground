@@ -10,6 +10,7 @@ class PostController < ApplicationController
     if @post.save
       @event.posts << @post
       @user.posts << @post
+      @post.upvote_by @user
       redirect_to show_event_path(@event)
     end
   end

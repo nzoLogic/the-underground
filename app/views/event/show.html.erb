@@ -1,9 +1,12 @@
 <h1 class="center">
     <%= @event.title %>
 </h1>
-<% @event.posts.each do |post|
+<% @event.posts.order(:cached_weighted_total => :desc).each do |post|
 %>
 <%= post.title %>
+<p>
+  <%= post.cached_votes_total %>
+</p>
 <% if post.photo %>
 <%= image_tag post.photo %>
 <% end %>
