@@ -57,3 +57,4 @@ gem 'carrierwave'
 
 gem 'httparty'
 gem 'materialize-sass'
+gem 'koala'

@@ -1,7 +1,18 @@
-<div class="slider col m8 offset-m2">
-  <ul class="slides">
+<div class="slider fullscreen">
+  <ul class="slides black-filter">
+    <li class="black-filter">
+      <%= image_tag "nectar_live.jpg" %>
+      <div class="caption center-align">
+        <h3>Welcome To The Underground</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
     <li>
-      <%= image_tag "tribe.jpg" %>
+      <%= image_tag "Bassnectar_NYE.jpg" %>
+      <div class="caption center-align">
+        <h3>Welcome To The Underground</h3>
+        <%= link_to "Enter the underground", events_path, class: "btn grey" %>
+      </div>
     </li>
   </ul>
 </div>

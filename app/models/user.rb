@@ -15,4 +15,10 @@ class User < ApplicationRecord
     email: auth['info']['email']
     )
   end
+
+  def self.koala(auth)
+    access_token = auth['token']
+    facebook = Koala::Facebook::API.new(access_token)
+    facebook.get_object("me?fields=friends")
+  end
 end
