@@ -10,6 +10,7 @@ class EventController < ApplicationController
 
   def show
     @event = Event.find_by_id(params[:id])
+    @post = Post.new
   end
 
   private

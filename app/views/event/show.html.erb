@@ -1,4 +1,15 @@
 <h1>
-  <%= @event.title %>
+    <%= @event.title %>
 </h1>
-<p>Find me in app/views/event/show.html.erb</p>
+<% @event.posts.each do |post|
+%>
+<%= post.title %>
+<% if post.photo %>
+<%= image_tag post.photo %>
+<% end %>
+<% end %>
+<button class="modal-trigger btn" data-target="new-post">New Post</button>
+
+<div id="new-post" class="modal">
+    <%= render "post/new_post" %>
+</div>
