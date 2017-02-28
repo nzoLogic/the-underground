@@ -1,17 +1,24 @@
 <h1 class="center">
     <%= @event.title %>
 </h1>
-<% @event.posts.order(:cached_weighted_total => :desc).each do |post|
-%>
-<%= post.title %>
-<p>
-  <%= post.cached_votes_total %>
-</p>
-<% if post.photo %>
-<%= image_tag post.photo %>
-<% end %>
-<% end %>
-<button class="modal-trigger btn" data-target="new-post">New Post</button>
+<section class="col s4 offset-s3">
+        <% @event.posts.order(:cached_weighted_total => :desc).each do |post| %>
+        <div class="card">
+        <div class="card-content">
+          <span class="card-title">
+        <%= post.title %>
+        <span class="right">
+          <%= post.cached_votes_total %>
+        </span>
+      </span>
+      </div>
+        <% if post.photo %>
+        <%= image_tag post.photo %>
+        <% end %>
+        <% end %>
+    </div>
+</section>
+<button class="modal-trigger btn-floating halfway-fab waves-effect waves-light red" data-target="new-post"><i class="material-icons">edit</i></button>
 
 <div id="new-post" class="modal">
     <%= render "post/new_post" %>
