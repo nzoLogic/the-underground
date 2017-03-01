@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'event/show'
 
   get '/' => 'welcome#index', as: 'root'
+  get '/enter' => 'welcome#enter', as: 'enter_underground_path'
 
   get '/user/:id' => 'user#show', as: 'user_welcome'
   get '/user/:id/friends' => 'user#friends', as: 'user_friends'

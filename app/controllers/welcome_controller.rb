@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
     @user = current_user if current_user
   end
 
-  def profile
+  def enter
   end
 
   private
