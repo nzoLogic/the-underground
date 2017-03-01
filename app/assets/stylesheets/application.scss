@@ -1,10 +1,12 @@
 @import "materialize";
 
 body {
-  background-color: #666;
+  background-color: #000;
 }
 .landing {
   height: 100vh;
   background-image: url("self.jpg");
   background-size: cover;
+}
+.carousel-item {
 }

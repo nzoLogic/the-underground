@@ -1,34 +1,43 @@
-<h1 class="center">
-    <%= @event.title %>
-</h1>
-<section class="col s4 offset-s3">
-    <% @event.posts.order(:cached_weighted_total => :desc).each do |post| %>
-    <div class="card">
-        <div class="card-content">
-            <span class="card-title">
-                <%= post.title %>
-                <span class="right">
-                    <%= post.cached_votes_total %>
-                </span>
-            </span>
-        </div>
-        <% if session[:user_id] == post.user_id %>
-        <div class="card-action">
-          <%= link_to "Edit", post_edit_path(:post_id => post.id) %>
-          <%= link_to "Delete", post_delete_path(:post_id => post.id), method: :delete, data: {confirm: "Are you sure you want to delete this moment?"} %>
-        </div>
-        <% end %>
+<header>
+    <h3 class="center white-text">
+        <%= @event.title %>
+    </h3>
+</header>
+<div class="col s12">
+    <section class="carousel">
+        <% @event.posts.find_each do |post| %>
         <% if post.photo %>
-        <%= image_tag post.photo %>
+        <a class="carousel-item">
+            <%= image_tag post.photo %>
+        </a>
         <% end %>
         <% end %>
+    </section>
+</div>
+<% @event.posts.order(:cached_weighted_total => :desc).each do |post| %>
+<div class="card">
+    <div class="card-content">
+        <span class="card-title">
+            <%= post.title %>
+            <span class="right">
+                <%= post.cached_votes_total %>
+            </span>
+        </span>
     </div>
+    <% if session[:user_id] == post.user_id %>
+    <div class="card-action">
+        <%= link_to "Edit", post_edit_path(:post_id => post.id) %>
+        <%= link_to "Delete", post_delete_path(:post_id => post.id), method: :delete, data: {confirm: "Are you sure you want to delete this moment?"} %>
+    </div>
+    <% end %>
+
+    <% end %>
+</div>
 </section>
 <button class="modal-trigger btn-floating halfway-fab waves-effect waves-light red" data-target="new-post">
-    <i class="material-icons">edit</i>
+<i class="material-icons">edit</i>
 </button>
 
 <div id="new-post" class="modal">
-    <%= render "post/new_post" %>
+<%= render "post/new_post" %>
 </div>
-<% console %>
