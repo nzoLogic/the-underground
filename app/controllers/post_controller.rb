@@ -26,6 +26,14 @@ class PostController < ApplicationController
     post.update(post_params)
     redirect_to show_event_path(event)
   end
+
+  def destroy
+    event = Event.find_by_id(params[:id])
+    post = Post.find_by_id(params[:post_id])
+    post.destroy
+    redirect_to show_event_path(event)
+  end
+
   private
 
   def post_params

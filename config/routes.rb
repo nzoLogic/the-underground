@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   post '/event/:id/post' => 'post#create', as: 'posts'
   get '/event/:id/post/:post_id' => 'post#edit', as: 'post_edit'
   patch '/event/:id/post/:post_id' => 'post#update', as: 'post_update'
+  delete '/event/:id/post/:post_id' => 'post#destroy', as: 'post_delete'
 
 end
