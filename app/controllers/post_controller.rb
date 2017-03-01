@@ -20,7 +20,6 @@ class PostController < ApplicationController
   end
 
   def update
-    p "INSIDE OF UPDATE"
     event = Event.find_by_id(params[:id])
     post = Post.find_by_id(params[:post_id])
     post.update(post_params)
