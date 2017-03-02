@@ -6,9 +6,12 @@
         <h4 class="center white-text">Where live music never dies</h4>
     </div>
     <div class="row">
-        <div class="col m4 offset-m4">
+        <div class="col entry">
+          <% if current_user %>
             <%= link_to "ENTER", events_path, class: "btn red waves-effect center waves-light" %>
-            <%= link_to "Facebook Login", "/auth/facebook", class: "btn blue right" %>
+            <% else %>
+            <%= link_to "Facebook Login", "/auth/facebook", class: "btn blue center" %>
+            <% end %>
         </div>
     </div>
 </div>
