@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     session[:omniauth] = auth.except('extra')
     user = User.sign_in_from_omniauth(auth)
     session[:user_id] = user.id
-    redirect_to user_welcome_path(user), notice: "signed in"
+    redirect_to events_path, notice: "signed in"
   end
 
   def destroy

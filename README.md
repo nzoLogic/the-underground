@@ -1,24 +1,13 @@
-# README
+# The Underground
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+the-underground offers bassnectar fans a place to share their favorite moments, videos, pictures, and overall experiences from their past/present show! Stay updated with recent news, and most importantly connect with other bassheads across the world!
 
-Things you may want to cover:
+### Features
 
-* Ruby version
+* Login/Auth with Facebook
 
-* System dependencies
+* Upvote content by clicking 'like'
 
-* Configuration
+* Upload Photos that display in a slider
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### 
