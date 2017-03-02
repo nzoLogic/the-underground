@@ -7,7 +7,7 @@ body {
 
 .landing {
     height: 100vh;
-    background-image: url("oneself.jpg");
+    background-image: url(<%= asset_path "oneself.jpg" %>);
     background-size: cover;
 }
 
@@ -41,7 +41,9 @@ body {
 
 .user-header {
     background-color: #666;
-    height: 60px;
+    height: 40px;
+    margin-top: 10%;
+    padding: auto 0;
 }
 
 .input-field .prefix.active {

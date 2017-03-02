@@ -1,7 +1,9 @@
 <div class="row">
-  <div class="user-header valign-wrapper">
-    <h5 class="valign">Welcome
-        <span class="red-text"><%= @user.name %>!</span>
-    </h5>
-  </div>
+  <span class="white-text">Welcome
+    <%= @user.name %>!
+  </span>
+  <%= image_tag @user.photo, class: "circle responsive-image" %>
+</div>
+<div class="user-header">
+  <h6 class="center-align">Bands You're Following</h6>
 </div>
