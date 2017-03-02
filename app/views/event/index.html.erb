@@ -1,5 +1,17 @@
-<% @events.each do |event| %>
-  <h3>
-    <%= link_to event.title, show_event_path(event) %>
-  </h3>
-<% end %>
+<header class="parallax-container">
+    <div class="parallax">
+        <%= image_tag "Bassnectar_NYE.jpg" %>
+    </div>
+    <h3 class="white-text center">Bassnectar</h3>
+</header>
+<div class="row">
+  <div class="col m6 offset-m3">
+    <% @events.each do |event| %>
+    <div class="card-panel grey lighten-2">
+    <h3 class="center">
+        <%= link_to event.title, show_event_path(event) %>
+    </h3>
+  </div>
+    <% end %>
+  </div>
+</div>

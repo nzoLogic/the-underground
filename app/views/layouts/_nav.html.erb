@@ -5,34 +5,42 @@
 <ul id="slide-out" class="side-nav">
     <li>
         <div class="userView">
-            <div class="background">
-              <% if current_user %>
-                <%= image_tag current_user.photo %>
-                <% end %>
-            </div>
-            <a href="#!user"></a>
-            <a href="#!name">
-                <span class="white-text name">John Doe</span>
-            </a>
-            <a href="#!email">
-                <span class="white-text email">jdandturk@gmail.com</span>
-            </a>
+            <% if current_user %>
+            <%= image_tag current_user.photo, class: "center-align" %>
+            <p class="name right"><%= current_user.name %></p>
+            <% end %>
+
         </div>
     </li>
     <li>
         <a href="#!">
-            <i class="material-icons">cloud</i>First Link With Icon</a>
+            <i class="material-icons">cloud</i>Home</a>
     </li>
     <li>
-        <a href="#!">Second Link</a>
+        <a href="Artists">
+          <i class="material-icons">library_music</i>Artists</a>
+    </li>
+    <li>
+        <a href="/events">
+          <i class="material-icons">library_music</i>Events</a>
     </li>
     <li>
         <div class="divider"></div>
     </li>
     <li>
-        <a class="subheader">Subheader</a>
+        <a class="subheader">Personal</a>
     </li>
     <li>
-        <a class="waves-effect" href="#!">Third Link With Waves</a>
+        <a class="waves-effect" href="#!">Inbox<span class="new badge blue small">2</span></a>
+    </li>
+    <li>
+        <a class="waves-effect" href="#!">Friends</a>
+    </li>
+    <li>
+      <% if current_user %>
+      <%= link_to "Logout", logout_path, class: "btn red" %>
+      <% else %>
+      <%= link_to "Facebook Login", "/auth/facebook", class: "btn blue" %>
+      <% end %>
     </li>
 </ul>

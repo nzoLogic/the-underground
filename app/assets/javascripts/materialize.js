@@ -10,4 +10,6 @@ $(document).ready(function() {
     $('.slider').slider();
     $('.modal').modal();
     $('.carousel').carousel({fullWidth: true});
+
+    $('.parallax').parallax();
 })
