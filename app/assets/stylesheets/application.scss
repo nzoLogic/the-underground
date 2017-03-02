@@ -1,37 +1,52 @@
 @import "materialize";
 
 body {
-  background-color: #000;
-  font-family: Helvetica;
+    background-color: #000;
+    font-family: Helvetica;
 }
+
 .landing {
-  height: 100vh;
-  background-image: url("self.jpg");
-  background-size: cover;
+    height: 100vh;
+    background-image: url("self.jpg");
+    background-size: cover;
 }
 
 .grey-outline {
-  border: 1px solid gray;
+    border: 1px solid gray;
 }
+
 .event-box {
-  height: 40vh;
+    height: 40vh;
 }
+
 .moment-collection {
-  overflow-x: scroll;
+    overflow-x: scroll;
 }
 
 .parallax-container {
-  background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,.5);
 }
 
 .btn-floating {
-  position: fixed !important;
-  top: 1%;
-  right: 1%;
+    position: fixed !important;
+    top: 1%;
+    right: 1%;
 }
 
 .entry {
-  position: absolute;
-  bottom: 33%;
-  left: 43%;
+    position: absolute;
+    bottom: 33%;
+    left: 43%;
+}
+
+.user-header {
+    background-color: #666;
+    height: 60px;
+}
+
+.input-field .prefix.active {
+     color: #fff;
+   }
+.input-field {
+  color: #fff;
 }
