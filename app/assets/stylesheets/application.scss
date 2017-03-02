@@ -8,5 +8,13 @@ body {
   background-image: url("self.jpg");
   background-size: cover;
 }
-.carousel-item {
+
+.grey-outline {
+  border: 1px solid gray;
+}
+.event-box {
+  height: 40vh;
+}
+.moment-collection {
+  overflow-x: scroll;
 }

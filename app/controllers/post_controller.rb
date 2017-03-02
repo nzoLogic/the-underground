@@ -10,7 +10,6 @@ class PostController < ApplicationController
     if @post.save
       @event.posts << @post
       @user.posts << @post
-      @post.upvote_by @user
       redirect_to show_event_path(@event)
     end
   end
@@ -33,6 +32,10 @@ class PostController < ApplicationController
     redirect_to show_event_path(event)
   end
 
+  def up_vote_moment(post)
+    post.upvote_by current_user
+    redirect_to :back
+  end
   private
 
   def post_params
